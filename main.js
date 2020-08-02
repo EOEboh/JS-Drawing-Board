@@ -6,7 +6,7 @@ const mainPath = [];
 let currentPath = [];
 // this serves as a background for any of the drawing lol
 function preload() { 
-    img = loadImage('sample.jpg'); 
+    img = loadImage('sample1.png'); 
     // this P5js function defines the canvas and the background colour
   } 
 function setup() {
