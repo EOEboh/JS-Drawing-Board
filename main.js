@@ -27,7 +27,7 @@ function setup() {
     
   function saveToFile() { 
     // Save the current canvas to file as png 
-    saveCanvas('my sketch', 'jpg') 
+    saveCanvas('my sketch', 'png') 
     alert("Your drawing will be saved to your device")
   } 
 //   to make the canvas responsive to different window sizes
