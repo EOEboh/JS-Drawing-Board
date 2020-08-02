@@ -10,25 +10,30 @@ function preload() {
     // this P5js function defines the canvas and the background colour
   } 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+    createCanvas(innerWidth, innerHeight);
     background(255);
     
-    createCanvas(innerWidth, innerHeight); 
+    
     
     // this defines the image where the drawing takes place so it can be saved 
     image(img, 0, 0); 
     
     // a button for saving the canvas 
-    let = saveBtn = createButton("Save Drawing"); 
-    saveBtn.position() 
-    saveBtn.mousePressed(saveToFile); 
+    let = saveBtn = createButton("Save Sketch"); 
+    saveBtn.position(10,210);
+    saveBtn.touchStarted(saveToFile); 
   } 
+  
     
   function saveToFile() { 
     // Save the current canvas to file as png 
-    saveCanvas('mydrawing', 'png') 
+    saveCanvas('my sketch', 'jpg') 
     alert("Your drawing will be saved to your device")
   } 
+//   to make the canvas responsive to different window sizes
+  function windowResized(){
+      resizeCanvas(windowWidth, windowHeight)
+  }
 
 //  this p5js function makes the drawing by defining the vertices and color
 function draw() {
@@ -55,10 +60,7 @@ mainPath.forEach(path =>{
 });
 
 }
-function windowResized(){
-    resizeCanvas(windowWidth, windowHeight)
-}
- function mousePressed(){
+ function touchStarted(){
      currentPath = [];
      mainPath.push(currentPath);
  }

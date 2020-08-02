@@ -1,8 +1,11 @@
+
+body{
+    overflow: hidden;
+}
 .sidebar{
     position: absolute;
     background-color:#333;
-    overflow: hidden;
-    
+    overflow: hidden;   
     
 }
 .sidebar ul{
@@ -20,9 +23,11 @@
 }
 label{
     color: papayawhip;
+    display: block;
 }
-@media all and (max-width: 760px){
+@media all and (max-width:768px){
     body{
-        width: 100%;
+        overflow: hidden;
     }
+
 }
